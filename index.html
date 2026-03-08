@@ -416,18 +416,64 @@
         }
 
         .showcase-card {
-            background: none;
+            background: transparent;
+            border-radius: 0;
+            overflow: visible;
             border: none;
-            padding: 0;
-            margin: 0;
+            transition: all 0.4s ease;
+            position: relative;
         }
-        
-        .showcase-card img {
-            display: block;
-            max-width: 100%;
+
+        .showcase-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .showcase-image {
+            width: 100%;
+            overflow: visible;
+            position: relative;
+            background: transparent;
+            border-radius: 0;
+        }
+
+        .showcase-image img {
+            width: 100%;
             height: auto;
-            border: none;
-            box-shadow: none;
+            display: block;
+            transition: transform 0.5s ease;
+            border-radius: 0;
+        }
+
+        .showcase-card:hover .showcase-image img {
+            transform: scale(1.02);
+        }
+
+        .showcase-content {
+            padding: 1.5rem 0;
+            background: transparent;
+        }
+
+        .showcase-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .showcase-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--purple-light);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
         }
 
         /* 核心功能 */
@@ -852,33 +898,80 @@
             </div>
             <div class="showcase-grid">
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/01-home.png" alt="AI虚拟人晓语">
+                    <div class="showcase-image">
+                        <img src="yubanimage/01-home.png" alt="AI虚拟人晓语">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>AI虚拟人「晓语」</h3>
+                        <p>具备深度同理心的智能伴侣，长期记忆，越聊越懂您</p>
+                        <span class="feature-tag">核心功能</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/02-chat.png" alt="智能对话">
+                    <div class="showcase-image">
+                        <img src="yubanimage/02-chat.png" alt="智能对话">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>自然对话体验</h3>
+                        <p>语音/文字双模态，轻松讲述您的故事</p>
+                        <span class="feature-tag">交互体验</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/03-chat-history.png" alt="对话记录">
+                    <div class="showcase-image">
+                        <img src="yubanimage/03-chat-history.png" alt="对话记录">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>历史会话管理</h3>
+                        <p>保存每一次珍贵对话，随时回顾人生片段</p>
+                        <span class="feature-tag">记忆管理</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/04-photo-restore.png" alt="老照片修复">
+                    <div class="showcase-image">
+                        <img src="yubanimage/04-photo-restore.png" alt="老照片修复">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>老照片修复</h3>
+                        <p>AI修复模糊破损照片，黑白照片智能着色</p>
+                        <span class="feature-tag">图像AI</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/05-photo-compare.png" alt="修复对比">
+                    <div class="showcase-image">
+                        <img src="yubanimage/05-photo-compare.png" alt="修复对比">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>修复前后对比</h3>
+                        <p>拖拽滑块查看修复效果，见证时光倒流</p>
+                        <span class="feature-tag">图像AI</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/06-community.png" alt="社区广场">
+                    <div class="showcase-image">
+                        <img src="yubanimage/06-community.png" alt="社区广场">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>社区广场</h3>
+                        <p>公开发布故事，与读者互动点赞评论</p>
+                        <span class="feature-tag">社交分享</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/07-topics.png" alt="专题广场">
+                    <div class="showcase-image">
+                        <img src="yubanimage/07-topics.png" alt="专题广场">
+                    </div>
+                    <div class="showcase-content">
+                        <h3>专题广场</h3>
+                        <p>家族史、同学聚会等主题，支持公开/私密模式</p>
+                        <span class="feature-tag">主题协作</span>
+                    </div>
                 </div>
                 <div class="showcase-card reveal">
-                    <img src="yubanimage/08-autobiography.png" alt="自传生成">
-                </div>
-                <div class="showcase-card reveal">
-                    <img src="yubanimage/09-toc.png" alt="文章目录">
-                </div>
-            </div>
+                    <div class="showcase-image">
+                        <img src="yubanimage/08-autobiography.png" alt="自传生成">
+                    </div>
+                    <div class="showcase-content">
                         <h3>自传一键生成</h3>
                         <p>整合素材，生成精美个人传记/回忆录/家族史</p>
                         <span class="feature-tag">核心功能</span>
